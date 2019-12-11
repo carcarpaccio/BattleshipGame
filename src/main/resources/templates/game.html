@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+</head>
+<body>
+<form action="Game" method="post">
+    <p>攻撃しましょう！</p>
+    <br><br>
+    <p>縦</p>
+    <input type="radio" name="width" value="0" checked="checked">1
+    <input type="radio" name="width" value="1">2
+    <input type="radio" name="width" value="2">3
+    <input type="radio" name="width" value="3">4
+    <input type="radio" name="width" value="4">5
+    <p>横</p>
+    <input type="radio" name="length" value="0" checked="checked">a
+    <input type="radio" name="length" value="1">b
+    <input type="radio" name="length" value="2">c
+    <input type="radio" name="length" value="3">d
+    <input type="radio" name="length" value="4">e
+    <br><br>
+    <button type="submit">決定</button>
+</form>
+
+<p>あなたの陣地</p>
+
+<ul th:each="ri:[[${infos}]]"><li></li></ul>
+<table border="1">
+    <tr>
+        <th></th>   <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th>
+    </tr>
+    <tr>
+        <th>1</th>  <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <th>2</th>  <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <th>3</th>  <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <th>4</th>  <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <th>5</th>  <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+</table>
+
+<p>CPUの陣地</p>
+<table border="1">
+    <tr>
+        <th></th>   <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th>
+    </tr>
+    <tr>
+        <th>1</th>  <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <th>2</th>  <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <th>3</th>  <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <th>4</th>  <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <th>5</th>  <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+</table>
+
+</body>
+</html>
